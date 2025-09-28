@@ -2,9 +2,24 @@
 .DS_Store
 Thumbs.db
 
-# Logs
+# Logs.
 *.log
 
 # Temp files.
 *.tmp
 *.swp
+
+# IntelliJ IDEA.
+.idea/
+*.iml
+out/
+
+# Java.
+*.class
+
+# Maven.
+target/
+
+# Gradle.
+.build/
+.gradle/
