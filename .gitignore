@@ -23,3 +23,11 @@ target/
 # Gradle.
 .build/
 .gradle/
+
+# Eclipse.
+.project
+.classpath
+.settings/
+
+# Spring Boot extra.
+spring.log
