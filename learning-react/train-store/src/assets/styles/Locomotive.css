@@ -1,0 +1,33 @@
+.locomotive-description {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  width: 1170px;
+  height: 368px;
+  margin: 10px 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 3px 13px 1px rgba(0 0 0 / 9%);
+  padding-right: 10px;
+}
+
+.locomotive-description a:link, a:visited  {
+  background-color: #f44336;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.locomotive-description a:hover, a:active {
+  background-color: red;
+}
+
+.locomotive-image {
+  width: auto;
+  height: 100%;
+  padding-right: 10px;
+}
