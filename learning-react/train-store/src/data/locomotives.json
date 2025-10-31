@@ -35,4 +35,13 @@
     "description": "GP38 diesel locomotive in the classic Canadian Pacific red and grey paint scheme. This model features detailed bodywork, authentic paint, and accurate decals. Standard DC with a powerful motor and smooth operation, it's an excellent choice for collectors and railroad enthusiasts.",
     "price": "$120.00"
   }
+  {
+    "id": 5,
+    "manufacturer": "Atlas",
+    "model": "SD70 FERROMEX",
+    "stock": 3,
+    "gauge": "HO Scale",
+    "description": "SD70 electric diesel locomotive with the new Ferromex scheme. This model features detailed bodywork, authentic paint, and accurate decals. Standard DC with a powerful motor and smooth operation, it's the perfect model to complete your collection.",
+    "price": "$190.00"
+  }
 ]
