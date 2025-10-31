@@ -1,23 +1,23 @@
 import '../assets/styles/Locomotive.css';
 
-function Locomotive(props) {
+function Locomotive({loco, manufacturer, gauge, model, stock, description, price}) {
+  console.log({manufacturer});
   return (
     <div className="locomotive-description">
       <img 
         className="locomotive-image"
-        src={props.loco}
-        alt="O 41853 GG1, Pennsylvania."
+        src={loco}
       />
       <div>
-        <p><strong>{props.manufacturer}</strong></p>
-        <p><strong>{props.gauge}</strong></p>
+        <p><strong>{manufacturer} </strong></p>
+        <p><strong>{gauge}</strong></p>
         <br />
-        <p><strong>{props.model}</strong></p>
-        <p>In stock: {props.stock}</p>
+        <p><strong>{model}</strong></p>
+        <p>In stock: {stock}</p>
         <br />
-        <p className="name-locomotive">{props.description}</p>
+        <p>{description}</p>
         <br />
-        <p><strong>{props.price}</strong></p>
+        <p><strong>{price}</strong></p>
         <br />
         <a href="#">Add to car</a>
       </div>
