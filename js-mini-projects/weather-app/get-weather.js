@@ -53,8 +53,11 @@ function selectSuggestion(city) {
 
 searchButton.addEventListener("click", () => {
   const cityName = searchInput.value.trim();
-  if (cityName.length > 0) {
-    searchCity(cityName);
+  if (cityName.length > 0 || cityName.trim() !== "") {
+    searchCity(cityName); 
+  } else {
+    alert("Please enter a city name.");
+    searchInput.focus();
   }
 });
 
@@ -99,32 +102,8 @@ function searchCity(cityName) {
   getGeoLocation(urlGeoAPI, nameCity, cityAdmin1);
 }
 
-/*async function getGeoLocation(urlGeoAPI, nameCity, cityAdmin1) {
-  console.log("Fetching geolocation data for URL:", urlGeoAPI);
-  fetch(urlGeoAPI)
-    .then(response => response.json())
-    .then(data => {
-      console.log("Geolocation data received:", data);
-      const filteredResults = data.results.filter(element => element.country_code === "MX");
-      filteredResults.forEach(element => {
-        let name = element.name;
-        let latitude = element.latitude;
-        let longitude = element.longitude;
-        let elevation = element.elevation;
-        let admin1 = element.admin1;
-        let country = element.country_code;
-        console.log(name, admin1, country);
-        if (name.trim().toLowerCase() === nameCity.toLowerCase() && admin1.trim().toLowerCase() === cityAdmin1.toLowerCase()) {
-          console.log(`City: ${name}, Latitude: ${latitude}, Longitude: ${longitude}, Elevation: ${elevation}, State: ${admin1}, Country: ${country}`);
-        }
-      });
-    }).catch(error => {
-      console.error('Error fetching geolocation data:', error);
-    });
-}*/
 async function getGeoLocation(urlGeoAPI, nameCity, cityAdmin1) {
   try {
-    console.log("Fetching geolocation data for URL:", urlGeoAPI);
     const response = await fetch(urlGeoAPI);
     const data = await response.json();
     if (!data.results || data.results.length === 0) {
@@ -137,8 +116,8 @@ async function getGeoLocation(urlGeoAPI, nameCity, cityAdmin1) {
       admin1.trim().toLowerCase() === cityAdmin1.toLowerCase()
     );
     if (match) {
-      const { name, latitude, longitude, elevation, admin1, country_code: country } = match;
-      getWeather(latitude, longitude, name);
+      const { name, latitude, longitude, admin1 } = match;
+      getWeather(latitude, longitude, name, admin1);
     } else {
       console.warn("No matching city found in Mexico.");
       return null;
@@ -149,25 +128,30 @@ async function getGeoLocation(urlGeoAPI, nameCity, cityAdmin1) {
   }
 }
 
-
-async function getWeather(latitude, longitude, currentCity) {
+async function getWeather(latitude, longitude, currentCity, admin1) {
   const urlWeatherAPI = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,is_day,wind_speed_10m,cloud_cover,rain,precipitation,showers,snowfall`
   try {
     const response = await fetch(urlWeatherAPI);
     const data = await response.json();
-    showWeatherData(data, currentCity);
+    showWeatherData(data, currentCity, admin1);
   } catch (error) {
     console.error('Error fetching weather data:', error);
   }
 }
 
-function showWeatherData(data, currentCity) {
-  const weatherIconElem = document.querySelector(".weather-icon");
-  const tempElem = document.querySelector(".temp");
-  const currentCityElem = document.querySelector(".city");
+function showWeatherData(data, currentCity, admin1) {
+  console.log(data);
+  const containerWeatherIcon = document.querySelector(".weather-icon");
+  const tempElem = document.getElementById("temp");
+  const currentCityElem = document.getElementById("city");
   const humidityElem = document.querySelector(".humidity");
   const windSpeedElem = document.querySelector(".wind");
-  currentCityElem.textContent = currentCity;
+  if (data.current.is_day === 1) {
+    containerWeatherIcon.innerHTML = '<i class="fa-solid fa-sun fa-10x"></i>';
+  } else {
+    containerWeatherIcon.innerHTML = '<i class="fa-solid fa-moon fa-10x"></i>';
+  }
+  currentCityElem.textContent = `${currentCity}, ${admin1}`;
   tempElem.textContent = `${data.current.temperature_2m}°C`;
   humidityElem.textContent = `${data.current.relative_humidity_2m}%`;
   windSpeedElem.textContent = `${data.current.wind_speed_10m}km/h`;

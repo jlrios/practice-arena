@@ -14,25 +14,25 @@
   <div class="card">
     <div class="search">
       <input id="input-city" type="text" placeholder="Enter city name" spellcheck="false">
-      <button id="search-city"><i class="fas fa-search fa-2x"></i></button>
+      <button id="search-city"><i class="fa fa-search fa-2x"></i></button>
       <div class="suggestions"></div>
     </div>
     <div class="weather">
-      <i class="fa-solid fa-cloud-rain fa-10x weather-icon"></i>
-      <h1 class="temp">22°C</h1>
-      <h2 class="city">Chihuahua</h2>
+      <div class="weather-icon"></div>
+      <h1 id="temp"><i class="fa-solid fa-spinner fa-spin"></i></h1>
+      <h2 id="city"></h2>
       <div class="weather-details">
         <div class="col">
           <i class="fa-solid fa-water fa-3x"></i>
           <div>
-            <p class="humidity">50%</p>
+            <p class="humidity"><i class="fa-solid fa-spinner fa-spin"></i></p>
             <p>Humidity</p>
           </div>
         </div>
         <div class="col">
           <i class="fa-solid fa-wind fa-3x"></i>
           <div>
-            <p class="wind">15km/h</p>
+            <p class="wind"><i class="fa-solid fa-spinner fa-spin"></i></p>
             <p>Wind speed</p>
           </div>
         </div>
