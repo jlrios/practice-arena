@@ -6,33 +6,33 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css">
   <script src="get-current-coords.js" defer></script>
-  <script src="weather.js" defer></script>
+  <script src="get-weather.js" defer></script>
   <title>Mini Weather App</title>
 </head>
 <body>
-  <h1>Mini project 01 - Weather app</h1>
+  <h1>Mini project 1 - Weather App</h1>
   <div class="card">
     <div class="search">
-      <input id="inputCity" type="text" placeholder="Enter city name" spellcheck="false">
-      <button id="searchCity"><i class="fas fa-search fa-2x"></i></button>
-      <div id="suggestions" class="suggestions"></div>
+      <input id="input-city" type="text" placeholder="Enter city name" spellcheck="false">
+      <button id="search-city"><i class="fas fa-search fa-2x"></i></button>
+      <div class="suggestions"></div>
     </div>
     <div class="weather">
       <i class="fa-solid fa-cloud-rain fa-10x weather-icon"></i>
-      <h1 id="temp" class="temp">22°C</h1>
-      <h2 id="city" class="city">Chihuahua</h2>
+      <h1 class="temp">22°C</h1>
+      <h2 class="city">Chihuahua</h2>
       <div class="details">
         <div class="col">
           <i class="fa-solid fa-water fa-3x"></i>
           <div>
-            <p id="humidity" class="humidity">50%</p>
+            <p class="humidity">50%</p>
             <p>Humidity</p>
           </div>
         </div>
         <div class="col">
           <i class="fa-solid fa-wind fa-3x"></i>
           <div>
-            <p id="wind-speed" class="wind">15km/h</p>
+            <p class="wind">15km/h</p>
             <p>Wind speed</p>
           </div>
         </div>

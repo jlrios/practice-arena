@@ -12,11 +12,8 @@ async function getCurrentCoords() {
     try {
       const response = await fetch(urlGeoAPI);
       const data = await response.json();
-      // console.log(data);
       if (Object.keys(data).length > 0) {
         currentCity = data.address.city;
-        // console.log(`User's city: ${currentCity}`);
-        // console.log(`Coordinates: Latitude ${latitude}, Longitude ${longitude}`);
         getWeather(latitude, longitude, currentCity); 
       } else {
         console.log('No results found for the given coordinates.');

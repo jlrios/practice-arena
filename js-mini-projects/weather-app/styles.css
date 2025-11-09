@@ -64,13 +64,13 @@ h1 {
 }
 
 .weather h1 {
-    font-size: 80px;
-    font-weight: 500;
+    font-size: 60px;
+    font-weight: 400;
 }
 
 .weather h2 {
-    font-size: 45px;
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: 300;
     margin-top: -10px;
 }
 
@@ -99,11 +99,12 @@ h1 {
 }
 
 .suggestions {
+  border-radius: 7px;
   position: absolute;  
-  display: none;        /* Se posiciona respecto al .search */
-  top: 75px;                   /* Un poco debajo del input */
+  display: none;        
+  top: 75px;                   
   left: 0;
-  width: 100%;                 /* Mismo ancho que el contenedor */
+  width: 100%;                 
   background: #fff;
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
