@@ -2,39 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="styles.css">
-  <script src="get-current-coords.js" defer></script>
-  <script src="get-weather.js" defer></script>
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0"
+  >
+  <!-- Font Awesome CDN -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  >
+  <link 
+    rel="stylesheet" 
+    href="styles.css"
+  >
+  <script 
+    src="get-current-coords.js" 
+    defer>
+  </script>
+  <script 
+    src="get-weather.js" 
+    defer>
+  </script>
   <title>Mini Weather App</title>
 </head>
 <body>
-  <h1>Mini project 1 - Weather App</h1>
-  <div class="card">
-    <div class="search">
-      <input id="input-city" type="text" placeholder="Enter city name" spellcheck="false">
-      <button id="search-city"><i class="fa fa-search fa-2x"></i></button>
-      <div class="suggestions"></div>
+  <h1>Project 1</h1>
+  <h2>Mini Weather App</h2>
+  <!-- Weather card -->
+  <div class="weather-card">
+    <div class="input-search">
+      <!-- Input city -->
+      <input 
+        id="name-city"
+        type="text" 
+        placeholder="Enter city name"
+        spellcheck="false"
+        autocomplete="off"
+      >
+      <button id="search-city">
+        <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+      </button>
+      <div class="cities-suggestions"></div>
     </div>
-    <div class="weather">
-      <div class="weather-icon"></div>
-      <h1 id="temp"><i class="fa-solid fa-spinner fa-spin"></i></h1>
-      <h2 id="city"></h2>
-      <div class="weather-details">
-        <div class="col">
-          <i class="fa-solid fa-water fa-3x"></i>
-          <div>
-            <p class="humidity"><i class="fa-solid fa-spinner fa-spin"></i></p>
-            <p>Humidity</p>
-          </div>
+    <div class="weather-details">
+      <i class="fa-solid fa-spinner fa-spin fa-6x"></i>
+    </div>
+    <!-- Main weather information -->
+    <h1 id="current-temp"></h1>
+    <h2 id="current-city"></h2>
+    <!-- Humidity and wind speed -->
+    <div class="humidity-wind-details">
+      <div class="col">
+        <i class="fa-solid fa-water fa-3x"></i>
+        <div>
+          <p>Humidity</p>
+          <h3 id="data-humidity">
+            <i class="fa-solid fa-spinner fa-spin"></i>
+          </h3>
         </div>
-        <div class="col">
-          <i class="fa-solid fa-wind fa-3x"></i>
-          <div>
-            <p class="wind"><i class="fa-solid fa-spinner fa-spin"></i></p>
-            <p>Wind speed</p>
-          </div>
+      </div>
+      <div class="col">
+        <i class="fa-solid fa-wind fa-3x"></i>
+        <div>
+          <p>Wind speed</p>
+          <h3 id="data-wind">
+            <i class="fa-solid fa-spinner fa-spin"></i>
+          </h3>
         </div>
       </div>
     </div>
