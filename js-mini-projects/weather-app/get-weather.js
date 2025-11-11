@@ -66,6 +66,12 @@ function renderSuggestions() {
 
     citiesSelect.appendChild(div);
   });
+
+  const active = citiesSelect.querySelector(".suggestion.active");
+
+  if (active) {
+    active.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  }
 }
 
 // -------------------------------
