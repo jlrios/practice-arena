@@ -31,3 +31,6 @@ target/
 
 # Spring Boot extra.
 spring.log
+
+# Node.js
+node_modules/
