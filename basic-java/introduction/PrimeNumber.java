@@ -1,5 +1,3 @@
-package basic;
-
 import java.util.Scanner;
 
 public class PrimeNumber {
@@ -19,5 +17,7 @@ public class PrimeNumber {
             System.out.println("The number " + prime + " is a prime number");
         else
             System.out.println("The number " + prime + " is not a prime number");
+        
+            number.close();
     }
 }

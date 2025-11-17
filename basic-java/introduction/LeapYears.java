@@ -1,5 +1,3 @@
-package basic;
-
 public class LeapYears {
     public static void main(String[] args) {
         int initYear = 1900, finalYear = 2050;

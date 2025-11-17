@@ -1,5 +1,3 @@
-package basic;
-
 import java.util.Scanner;
 
 public class Greeting {
@@ -7,10 +5,11 @@ public class Greeting {
         Scanner name = new Scanner(System.in);
         String myName;
 
-        System.out.print("What is your name: ");
+        System.out.print("\nWhat is your name: ");
         myName = name.nextLine();
 
-        System.out.println("Nice to meet you " + myName);
+        System.out.println("\nNice to meet you " + myName);
+        System.out.println("Welcome to Java programming\n\nJava is fun!\n");
 
         name.close();
     }
