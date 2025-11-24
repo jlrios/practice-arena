@@ -21,6 +21,8 @@ public class Weird {
                 System.out.println("Not Weird\n");
             }
         }    
+
+        intNumber.close();
     }
 }
     

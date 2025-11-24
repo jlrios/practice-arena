@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DataTypes {
+public class FitDataTypes {
     public static void main(String... args) {
         Scanner scanNum = new Scanner(System.in);
         int numCases = 0;
