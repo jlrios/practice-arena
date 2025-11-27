@@ -8,6 +8,8 @@ public class JavaInfo {
         System.out.println("Java Home: " + System.getProperty("java.home"));
         System.out.println("Java Vendor: " + System.getProperty("java.vendor"));
         System.out.println("Java Vendor URL: " + System.getProperty("java.vendor.url"));
-        System.out.println("Java Class Path: " + System.getProperty("java.class.path") + "\n");
+        System.out.println("Java Class Path: " + System.getProperty("java.class.path"));
+        System.out.println("OS Name: " + System.getProperty("os.name"));
+        System.out.println("OS Version: " + System.getProperty("os.version") + "\n");
     }
 }

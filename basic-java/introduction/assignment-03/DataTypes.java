@@ -44,6 +44,5 @@ public class DataTypes {
         System.out.println("Boolean type");
         System.out.println("-------------");
         System.out.println("Boolean -> " + myBoolean + "\n");
-    }
-    
+    }   
 }

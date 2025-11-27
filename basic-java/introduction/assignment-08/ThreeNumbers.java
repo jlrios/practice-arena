@@ -20,5 +20,7 @@ public class ThreeNumbers {
         if (larNum < n3) larNum = n3;
 
         System.out.println("The largest number is: " + larNum);
+
+        numbers.close();
     }
 }
