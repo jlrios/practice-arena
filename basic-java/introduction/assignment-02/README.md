@@ -1,4 +1,4 @@
-# Java basic - Assignment 02
+# Basic Java - Assignment 02
 ## Java System Information program
 
 ## Objective
@@ -10,14 +10,14 @@ This activity will help you practice the use of `System.out.println` for printin
 2. Inside the class, define the `main` method.
 3. Use `System.out.println` to display text messages and the values you retrieve.
 4. Use `System.getProperty` to read system properties such as:
-   * `"java.version"`
-   * `"java.runtime.version"`
-   * `"java.home"`
-   * `"java.vendor"`
-   * `"java.vendor.url"`
-   * `"java.class.path"`
-   * `"os.name"`
-   * `"os.version"`
+  * `"java.version"`
+  * `"java.runtime.version"`
+  * `"java.home"`
+  * `"java.vendor"`
+  * `"java.vendor.url"`
+  * `"java.class.path"`
+  * `"os.name"`
+  * `"os.version"`
    
 ## Expected Outcome
 By the end of this activity, you should be able to:

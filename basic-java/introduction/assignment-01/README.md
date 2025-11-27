@@ -1,4 +1,4 @@
-# Java basic - Assignment 01
+# Basic Java - Assignment 01
 ## The classic "Hello, World!" program
 
 ## Objective
