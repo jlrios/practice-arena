@@ -30,10 +30,10 @@ Learn how to create, compile, and run a basic Java program. This activity introd
 Expected Outcome
 
 By the end of this activity, you should be able to:
-* Understand the basic structure of a Java program.
-* Create and define a public class.
-* Use the main method as the entry point of a Java application.
-* Display text on the screen using System.out.println.
+  * Understand the basic structure of a Java program.
+  * Create and define a public class.
+  * Use the main method as the entry point of a Java application.
+  * Display text on the screen using System.out.println.
 
 ## Example Output
 ```terminal_session

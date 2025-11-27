@@ -21,9 +21,9 @@ This activity will help you practice the use of `System.out.println` for printin
    
 ## Expected Outcome
 By the end of this activity, you should be able to:
-- Print information to the screen using `System.out.println`.
-- Retrieve and display system properties using `System.getProperty`.
-- Understand how Java interacts with the underlying system environment.
+  * Print information to the screen using `System.out.println`.
+  * Retrieve and display system properties using `System.getProperty`.
+  * Understand how Java interacts with the underlying system environment.
 
 ## Example Output
 ```terminal_session
