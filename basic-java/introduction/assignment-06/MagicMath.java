@@ -2,13 +2,15 @@ import java.util.Scanner;
 
 public class MagicMath {
     public static void main(String[] args) {
-        Scanner intNumber = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         
         int myNumber = 0;
         int magicNumber = 0;
 
+        System.out.println("\nMagic with Math");
+
         System.out.print("\nEnter an integer number: ");
-        myNumber = intNumber.nextInt();
+        myNumber = sc.nextInt();
 
         magicNumber = myNumber * myNumber;
         magicNumber = magicNumber + myNumber;
@@ -17,8 +19,9 @@ public class MagicMath {
         magicNumber = magicNumber - myNumber;
         magicNumber = magicNumber / 6;
 
-        System.out.println(magicNumber + "\n");
+        System.out.println("Magic number -> " + magicNumber + "\n");
+        System.out.println("Try with another number ;)\n");
 
-        intNumber.close();
+        sc.close();
 	}
 }

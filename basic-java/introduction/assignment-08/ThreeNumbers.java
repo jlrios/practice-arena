@@ -2,16 +2,17 @@ import java.util.Scanner;
 
 public class ThreeNumbers {
     public static void main(String[] args) {
-        Scanner numbers = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int n1, n2, n3, larNum;
 
-        System.out.println("Find the largest number among the 3.");
-        System.out.print("Enter first number: ");
-        n1 = numbers.nextInt();
+        System.out.println("\nFind the largest number among the 3");
+
+        System.out.print("\nEnter first number: ");
+        n1 = sc.nextInt();
         System.out.print("Enter second number: ");
-        n2 = numbers.nextInt();
+        n2 = sc.nextInt();
         System.out.print("Enter third number: ");
-        n3 = numbers.nextInt();
+        n3 = sc.nextInt();
 
         if (n1 > n2)
             larNum = n1;
@@ -19,8 +20,8 @@ public class ThreeNumbers {
             larNum = n2;
         if (larNum < n3) larNum = n3;
 
-        System.out.println("The largest number is: " + larNum);
+        System.out.println("\nThe largest number is: " + larNum + "\n");
 
-        numbers.close();
+        sc.close();
     }
 }
