@@ -26,7 +26,7 @@ const contactInformation: ContactInformation[] = [
 
 export const Footer = () => {
   return(
-    <footer className='pt-[260px] pb-[300px] px-6'>
+    <footer className='pt-[150px] pb-[300px] px-6'>
       <img className='mb-10' src="/images/logo.svg" alt="Logo." />
       <div className='flex flex-col gap-4'>
 
