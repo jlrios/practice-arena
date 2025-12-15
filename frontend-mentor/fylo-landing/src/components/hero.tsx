@@ -1,3 +1,5 @@
+import { Button } from "./button"
+
 export const Hero = () => {
   return (
     <section className="-mt-20 relative z-10">
@@ -8,6 +10,9 @@ export const Hero = () => {
         Fylo stores all your most important files in one secure location. Access them
         wherever you need, share and collaborate with friends family, and co-workers.
       </p>
+      <div className='text-center mt-6 mb-10'>
+        <Button text='Get Started' styles='w-[240px]' />
+      </div>
     </section>
   )
 }
