@@ -22,7 +22,7 @@ function App() {
         <MoreInformation />
         <Testimonials />
       </section>
-      <section className='bg-Navi-950 relative'>
+      <section className='bg-Navy-950 relative'>
         <Form />
         <Footer />
       </section>
